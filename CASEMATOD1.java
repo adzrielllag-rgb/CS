@@ -10,7 +10,7 @@ public class CASEMATOD1 {
       System.out.print("NIM  : ");
       long nim = sc.nextLong();
       
-      System.out.println("\n");
+      System.out.println();
       System.out.println("--- Mata Kuliah 1: Algoritma dan Pemprogaman ---");
       System.out.print("Nilai Tugas : ");
       double tugas = sc.nextDouble();
@@ -19,7 +19,7 @@ public class CASEMATOD1 {
       System.out.print("Nilai UAS   : ");
       double uas = sc.nextDouble();
 
-      System.out.println("\n");
+      System.out.println();
       System.out.println("--- Mata Kuliah 2: Struktur Data ---");
       System.out.print("Nilai Tugas : ");
       double tugas2 = sc.nextDouble();
@@ -32,60 +32,64 @@ public class CASEMATOD1 {
       double nilai2 = (tugas2 * 0.3) + (uts2 * 0.3) + (uas2 * 0.4);
       
       String huruf1 = "";
-      if (nilai >= 80 && nilai <= 100) {
-        System.out.println("A") ;
-      } else if (nilai >= 73 && nilai < 80) {
-        System.out.println("B+");
-      } else if (nilai >= 65 && nilai < 73) {
-        System.out.println("B");
-      } else if (nilai >= 60 && nilai < 65) {
-        System.out.println("C+");
-      } else if (nilai >= 50 && nilai < 60) {
-        System.out.println("C");
-      } else {
+      if (nilai > 80 && nilai <= 100) {
+        huruf1 = "A";
+      } else if (nilai > 73 && nilai <= 80) {
+        huruf1 = "B+";
+      } else if (nilai > 65 && nilai <= 73) {
+        huruf1 = "B";
+      } else if (nilai > 60 && nilai <= 65) {
+        huruf1 = "C+";
+      } else if (nilai > 50 && nilai <= 60) {
+        huruf1 = "C";
+      } else if( nilai > 39 && nilai <= 50) {
+        huruf1 = "D";
+      } else  {
+        huruf1 = "E";
       }
 
       String huruf2 = "";
       if (nilai2 > 80 && nilai2 <= 100) {
-        System.out.println("A") ;
+        huruf2 = "A";
       } else if (nilai2 > 73 && nilai2 <= 80) {
-        System.out.println("B+");
+        huruf2 = "B+";
       } else if (nilai2 > 65 && nilai2 <= 73) {
-        System.out.println("B");
+        huruf2 = "B";
       } else if (nilai2 > 60 && nilai2 <= 65) {
-        System.out.println("C+");
+        huruf2 = "C+";
       } else if (nilai2 > 50 && nilai2 <= 60) {
-        System.out.println("C");
+        huruf2 = "C";
       } else if (nilai2 >39 && nilai2 <= 50) {
-        System.out.println("D");
-
+        huruf2 = "D";
+      } else {
+        huruf2 = "E";
       }
       String status1 = "";
-      if (nilai <60) {
-        System.out.println("Lulus");
+      if (nilai >60) {
+        status1 = "Lulus";
       } else {
-        System.out.println("Tidak Lulus");
+        status1 = "Tidak Lulus";
       }      
 
       String status2 = "";
-      if (nilai2 <60) {
-        System.out.println("Lulus");
+      if (nilai2 >60) {
+        status2 = "Lulus";
       } else {
-        System.out.println("Tidak Lulus");
+        status2 = "Tidak Lulus";
       }
       
-      System.out.println("\n");
+      System.out.println();
       System.out.println("======= HASIL PENELITIAN AKADEMIK =======");
       System.out.print("Nama : " + nama);
-      System.out.println("\n");
+      System.out.println("");
       System.out.print("NIM  : " + nim);
-      System.out.println();
-      System.out.println("Mata Kuliah\t\tUTS\tUAS\tTUGAS\tNILAI AKHIR\tNILAI HURUF\tSTATUS");
-      System.out.println("------------------------------------------------------------------");
+      System.out.println("\n");
+      System.out.println("Mata Kuliah\t\t\tUTS\tUAS\tTUGAS\tNILAI AKHIR\tNILAI HURUF\tSTATUS");
+      System.out.println("----------------------------------------------------------------------------------------");
       System.out.print("Algoritma dan Pemprogaman\t" + uts + "\t" + uas + "\t" + tugas + "\t" + nilai + "\t\t" + huruf1 + "\t\t" + status1);
       System.out.println();
       System.out.print("Struktur Data\t\t\t" + uts2 + "\t" + uas2 + "\t" + tugas2 + "\t" + nilai2 + "\t\t" + huruf2 + "\t\t" + status2);
-      System.out.println();
+      System.out.println("\n");
 
       double rataRata = (nilai + nilai2) / 2;
       String kelulusan = "";
