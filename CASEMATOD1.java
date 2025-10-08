@@ -19,8 +19,17 @@ public class CASEMATOD1 {
       System.out.print("Nilai UAS   : ");
       double uas = sc.nextDouble();
 
-      
-     }
+      System.out.println();
+      System.out.println("--- Mata Kuliah 2: Struktur Data ---");
+      System.out.print("Nilai Tugas : ");
+      double tugas2 = sc.nextDouble();
+      System.out.print("Nilai UTS   : ");
+      double uts2 = sc.nextDouble();
+      System.out.print("Nilai UAS   : ");
+      double uas2 = sc.nextDouble();
+
+      sc.close();    
+      }
     }
 
 
