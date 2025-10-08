@@ -31,28 +31,71 @@ public class CASEMATOD1 {
       double nilai = (tugas * 0.3) + (uts * 0.3) + (uas * 0.4);
       double nilai2 = (tugas2 * 0.3) + (uts2 * 0.3) + (uas2 * 0.4);
       
-      if (nilai2/nilai >= 80 && nilai2/nilai <= 100) {
+      String huruf1 = "";
+      if (nilai >= 80 && nilai <= 100) {
         System.out.println("A") ;
-      } else if (nilai2/nilai >= 68 && nilai2/nilai < 80) {
+      } else if (nilai >= 73 && nilai < 80) {
+        System.out.println("B+");
+      } else if (nilai >= 65 && nilai < 73) {
         System.out.println("B");
-      } else if (nilai2/nilai >= 56 && nilai2/nilai < 68) {
+      } else if (nilai >= 60 && nilai < 65) {
+        System.out.println("C+");
+      } else if (nilai >= 50 && nilai < 60) {
         System.out.println("C");
-      } else if (nilai2/nilai >= 45 && nilai2/nilai < 56) {
-        System.out.println("D");
-      } else if (nilai2/nilai >= 0 && nilai2/nilai < 45) {
-        System.out.println("E");
       } else {
-        System.out.println("gagal");
       }
 
-      if (nilai2/nilai >60) {
+      String huruf2 = "";
+      if (nilai2 > 80 && nilai2 <= 100) {
+        System.out.println("A") ;
+      } else if (nilai2 > 73 && nilai2 <= 80) {
+        System.out.println("B+");
+      } else if (nilai2 > 65 && nilai2 <= 73) {
+        System.out.println("B");
+      } else if (nilai2 > 60 && nilai2 <= 65) {
+        System.out.println("C+");
+      } else if (nilai2 > 50 && nilai2 <= 60) {
+        System.out.println("C");
+      } else if (nilai2 >39 && nilai2 <= 50) {
+        System.out.println("D");
+
+      }
+      String status1 = "";
+      if (nilai <60) {
         System.out.println("Lulus");
       } else {
         System.out.println("Tidak Lulus");
       }      
 
+      String status2 = "";
+      if (nilai2 <60) {
+        System.out.println("Lulus");
+      } else {
+        System.out.println("Tidak Lulus");
+      }
       
+      System.out.println("\n");
+      System.out.println("======= HASIL PENELITIAN AKADEMIK =======");
+      System.out.print("Nama : " + nama);
+      System.out.println("\n");
+      System.out.print("NIM  : " + nim);
+      System.out.println();
+      System.out.println("Mata Kuliah\t\tUTS\tUAS\tTUGAS\tNILAI AKHIR\tNILAI HURUF\tSTATUS");
+      System.out.println("------------------------------------------------------------------");
+      System.out.print("Algoritma dan Pemprogaman\t" + uts + "\t" + uas + "\t" + tugas + "\t" + nilai + "\t\t" + huruf1 + "\t\t" + status1);
+      System.out.println();
+      System.out.print("Struktur Data\t\t\t" + uts2 + "\t" + uas2 + "\t" + tugas2 + "\t" + nilai2 + "\t\t" + huruf2 + "\t\t" + status2);
+      System.out.println();
 
+      double rataRata = (nilai + nilai2) / 2;
+      String kelulusan = "";
+      if (rataRata >= 70) {
+        kelulusan = "Lulus";
+      } else {
+        kelulusan = "Tidak Lulus";
+      }
+      System.out.println("Ratarata Nilai Akhir : " + rataRata);
+      System.out.print("Status Smester       : " + kelulusan);
 
       sc.close();    
       }
